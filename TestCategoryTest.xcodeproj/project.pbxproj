@@ -15,6 +15,8 @@
 		E6D094051A94F6400043C242 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6D094031A94F6400043C242 /* LaunchScreen.xib */; };
 		E6D094111A94F6400043C242 /* TestCategoryTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D094101A94F6400043C242 /* TestCategoryTestTests.m */; };
 		E6D0941D1A94FF160043C242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6D093FE1A94F6400043C242 /* Main.storyboard */; };
+		E6D094201A9505E90043C242 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D0941F1A9505E90043C242 /* SecondViewController.m */; };
+		E6D094221A95062B0043C242 /* SecondViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6D094211A95062B0043C242 /* SecondViewControllerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		E6D0940F1A94F6400043C242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6D094101A94F6400043C242 /* TestCategoryTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryTestTests.m; sourceTree = "<group>"; };
 		E6D0941A1A94F6650043C242 /* ViewController+Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+Test.h"; sourceTree = "<group>"; };
+		E6D0941E1A9505E90043C242 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecondViewController.h; path = TestCategoryTest/SecondViewController.h; sourceTree = SOURCE_ROOT; };
+		E6D0941F1A9505E90043C242 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecondViewController.m; path = TestCategoryTest/SecondViewController.m; sourceTree = SOURCE_ROOT; };
+		E6D094211A95062B0043C242 /* SecondViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewControllerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +93,8 @@
 				E6D093FB1A94F6400043C242 /* ViewController.h */,
 				E6D093FC1A94F6400043C242 /* ViewController.m */,
 				E6D0941A1A94F6650043C242 /* ViewController+Test.h */,
+				E6D0941E1A9505E90043C242 /* SecondViewController.h */,
+				E6D0941F1A9505E90043C242 /* SecondViewController.m */,
 				E6D093FE1A94F6400043C242 /* Main.storyboard */,
 				E6D094011A94F6400043C242 /* Images.xcassets */,
 				E6D094031A94F6400043C242 /* LaunchScreen.xib */,
@@ -109,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				E6D094101A94F6400043C242 /* TestCategoryTestTests.m */,
+				E6D094211A95062B0043C242 /* SecondViewControllerTests.m */,
 				E6D0940E1A94F6400043C242 /* Supporting Files */,
 			);
 			path = TestCategoryTestTests;
@@ -223,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D094201A9505E90043C242 /* SecondViewController.m in Sources */,
 				E6D093FD1A94F6400043C242 /* ViewController.m in Sources */,
 				E6D093FA1A94F6400043C242 /* AppDelegate.m in Sources */,
 				E6D093F71A94F6400043C242 /* main.m in Sources */,
@@ -233,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6D094221A95062B0043C242 /* SecondViewControllerTests.m in Sources */,
 				E6D094111A94F6400043C242 /* TestCategoryTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
