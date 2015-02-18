@@ -24,9 +24,9 @@
     
     self.vc = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[self class]]] instantiateViewControllerWithIdentifier:@"VC"];
     
-    [self.vc view];
-    
     //self.vc = [[ViewController alloc] init];
+    
+    [self.vc view];
 }
 
 - (void)tearDown {
@@ -40,7 +40,7 @@
 - (void)testCategoryChangingColor
 {
     [self.vc setMyBackgroundColor:[UIColor redColor]];
-    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor redColor],@"color blue");
+    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor redColor],@"color red");
 }
 
 - (void)testStoryboardShouldBeInitialized
@@ -52,8 +52,7 @@
 - (void)testButtonClick
 {
     [self.vc.btn1 sendActionsForControlEvents:UIControlEventTouchUpInside];
-    
-    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor greenColor],@"color blue");
+    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor greenColor],@"color green");
 }
 
 - (void)testPerformanceExample {
