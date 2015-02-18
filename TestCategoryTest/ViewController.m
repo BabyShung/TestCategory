@@ -10,18 +10,26 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self setMyBackgroundColor:[UIColor blueColor]];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setMyBackgroundColor:(UIColor *)color
+{
+    self.view.backgroundColor = color;
+}
+
+- (IBAction)click:(id)sender {
+    [self setMyBackgroundColor:[UIColor greenColor]];
 }
 
 @end

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "ViewController+Test.h"
+
 
 @interface TestCategoryTestTests : XCTestCase
+
+@property (nonatomic, strong) ViewController *vc;
 
 @end
 
@@ -17,17 +21,39 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    self.vc = (ViewController *)[[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[self class]]] instantiateViewControllerWithIdentifier:@"VC"];
+    
+    [self.vc view];
+    
+    //self.vc = [[ViewController alloc] init];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testDefaultBgColor {
+    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor blueColor],@"color blue");
+}
+
+- (void)testCategoryChangingColor
+{
+    [self.vc setMyBackgroundColor:[UIColor redColor]];
+    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor redColor],@"color blue");
+}
+
+- (void)testStoryboardShouldBeInitialized
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[self class]]];
+    XCTAssertNotNil(storyboard, @"");
+}
+
+- (void)testButtonClick
+{
+    [self.vc.btn1 sendActionsForControlEvents:UIControlEventTouchUpInside];
+    
+    XCTAssertEqualObjects(self.vc.view.backgroundColor, [UIColor greenColor],@"color blue");
 }
 
 - (void)testPerformanceExample {
